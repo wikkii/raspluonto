@@ -1,3 +1,37 @@
+#HeaderNav {
+	
+	color: black;
+	font-size: 9;
+	
+}
+
+#main {
+	
+	background-color: #f9f9f9;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 15px;
+}
+
+#kuvaus {
+	
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/* Text disappears below 768. */
+
+@media (max-width: 768px) {
+    
+	#kuvausteksti {
+        
+		display: none;
+    
+	}
+}
+
 
 h1 {
 	
@@ -9,13 +43,11 @@ h1 {
 }
 
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
 
-#logo	{width: 60px}
+#logo	{width: 120px}
 
 }
-
-
 
 thead {
 
@@ -42,7 +74,7 @@ background-color: #38e200;
 
 }
 
-.space { margin-top: 150px; }
+.space { margin-top: 50px; }
 
 #tekijä {
 	
