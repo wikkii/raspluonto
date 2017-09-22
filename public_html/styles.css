@@ -1,8 +1,26 @@
 
+h1 {
+	
+	font-size: 40;
+	font-weight: bold;
+	color: red;
+
+	
+}
+
+
+@media (max-width: 770px) {
+
+#logo	{width: 60px}
+
+}
+
+
+
 thead {
 
 background-color: #eff0f2;
-font-weight: bold;
+
 
 }
 
@@ -14,7 +32,7 @@ font-weight: normal;
 
 #ihmiset {
 
-background-color: #38e200;
+background-color: red;
 
 }
 
@@ -22,4 +40,13 @@ background-color: #38e200;
 
 background-color: #38e200;
 
+}
+
+.space { margin-top: 150px; }
+
+#tekijä {
+	
+color: grey;
+text-align: center;
+	
 }
