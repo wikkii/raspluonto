@@ -1,7 +1,6 @@
 # parallax_pir_reva.py - write to screen when movement detected
 # (c) BotBook.com - Karvinen, Karvinen, Valtokari
-# 22.9.2017 modified by Vesa Valli
-
+# 22.9.2017 modified from original
 import time
 import botbook_gpio as gpio
 
