@@ -3,6 +3,7 @@
 <head>
 	<title>Virtuaaliluonto - Nuotiovahti</title>
 	<meta charset="utf-8" />
+	<meta name="description" content="Check the realtime status of nearby campfires." >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="favicon.png">
 	
@@ -17,11 +18,12 @@
 </head>
 <body>
 
- <!-- Header -->
+<!-- Header -->
 
- <div class="container">
-     
-	  <!-- Fixed Navbar -->
+<div class="container">
+	
+	<!-- Fixed Navbar -->
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -42,46 +44,33 @@
         </div>
       </div>
     </nav>
+</div>
 
 <br>
-<br>
 
- <!-- Picture & Description -->
+<!-- Fire Picture -->
  
-<div class="container" id="kuvaus">	
+<div class="container" id="picture">	
 
 <br>
 	<div class="row">
-		<div class="col-xs-3">
+		<div class="col-xs-12">
 		<img src="fireBig.png" id="logo" alt="Fire logo">
-		</div>
-		<div class="col-xs-8">
-		<br>
-		<p id="kuvausteksti">
-		Virtuaaliluonto - Nuotiovahti -projektin tarkoituksena oli suunnitella, toteuttaa ja testata yksi toimintavalmis Internet
-		of Things -tyyppisen sensorilaitteen prototyyppi. Laite kerää oleellista dataa
-		laavu- ja nuotiopaikoilta, joka lähetetään verkon yli loppukäyttäjälle hyödyllisenä tietona. Samalla kansallispuisto- tai leirialueiden ylläpitäjät saisivat statistiikkatietoa kohteiden käytöstä.
-		<br><br>
-		Dataa kerätään vain liikkeestä ja valosta. Projekti ei siis millään tavoin riko kävijöiden yksityisyyttä.
-		<br><br>
-		Lisätietoa projektista: <a href="https://raspluonto.wordpress.com">raspluonto.wordpress.com</a>
-		</p>
-		</div>
-		<div class="col-xs-1">
 		</div>
 	</div>
 </div>
 
-<div class="container" id="main">		
+<!-- Tables for status data -->
+
+<div class="container" id="maincontent">		
 	<div class="row">
 	
-	 <!-- Tables for sensor data -->
 	
 	<table class="table table-bordered">
 		<thead>
 			<tr>
 				
-				<th>Device ID:</th>
+				<th>Location:</th>
 				<th>Area status:</th>
 				<th>Fire status:</th>
 
@@ -90,9 +79,9 @@
 		<tbody>
 			<tr>
 				
-				<th>Raspberry 1</th>
-				<th id="ihmiset">Occupied</th>
-				<th id="tuli">Gone out</th>
+				<th>X</th>
+				<th id="pir"></th>
+				<th id="flame"></th>
 
 			</tr>
 		</tbody>
@@ -101,12 +90,14 @@
 
 	<div class="space"></div>
 	
-	<!-- Footer -->
+<!-- Footer & credits -->
 	
 	<div class="row">
+		
 		<p id="tekijä">Markus Pyhäranta - Virtuaaliluonto 2017.</p>
 	
 	</div>
 </div>
+
 </body>
 </html>
