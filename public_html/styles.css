@@ -1,3 +1,14 @@
+/* 
+
+CSS for Virtuaaliluonto - Nuotiovahti
+	By Markus Pyhäranta - 27.9.2017
+
+*/
+
+
+
+/* Header Navbar's title */
+
 #HeaderNav {
 	
 	color: #ff8800;
@@ -5,7 +16,9 @@
 	
 }
 
-#main {
+/* Div for the status tables */
+
+#maincontent {
 	
 	background-color: #f9f9f9;
 	padding-right: 30px;
@@ -13,35 +26,18 @@
 	padding-top: 15px;
 }
 
-#kuvaus {
+/* Div for the fire picture */
+
+#picture {
 	
 	padding-right: 15px;
 	padding-left: 15px;
-	padding-top: 15px;
+	padding-top: 30px;
 	padding-bottom: 15px;
+	text-align: center;
 }
 
-/* Text disappears below 768. */
-
-@media (max-width: 768px) {
-    
-	#kuvausteksti {
-        
-		display: none;
-    
-	}
-}
-
-
-h1 {
-	
-	font-size: 40;
-	font-weight: bold;
-	color: red;
-
-	
-}
-
+/* Makes the fire picture smaller on devices smaller than 768px in width. */
 
 @media (max-width: 768px) {
 
@@ -49,36 +45,41 @@ h1 {
 
 }
 
+/* Table column headings */
+
 thead {
 
-background-color: #eff0f2;
-
-
-}
-
-tbody {
-
-font-weight: normal;
+	background-color: #eff0f2;
 
 }
 
-#ihmiset {
+/* Tables for sensor data. #pir for motion detection and #flame for flame detaction. */
 
-background-color: red;
+#pir {
 
-}
-
-#tuli {
-
-background-color: #38e200;
+	background-color: #38e200;
 
 }
 
-.space { margin-top: 50px; }
+#flame {
+
+	background-color: #38e200;
+
+}
+
+/* Spacing */
+
+.space { 
+
+	margin-top: 50px; 
+	
+}
+
+/* End credits */
 
 #tekijä {
 	
-color: grey;
-text-align: center;
+	color: grey;
+	text-align: center;
 	
 }
