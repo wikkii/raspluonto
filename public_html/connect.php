@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$username = "markus";
+$username = "nuotiovahti";
 $password = "salasana";
 
 //Create connection
