@@ -1,21 +1,28 @@
 <?php
 
+// Database and login information
+
 $servername = "localhost";
-$username = "nuotiovahti";
-$password = "salasana";
+$database = "nuotiovahti";
+$username = "username";
+$password = "password";
 
-//Create connection
+// Connect to MySQL database
 
-$conn = new mysqli($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $database);
 
-//
+// Check the connection. Either print "Connection failed" or print "Connected successfully"
 
 if (!$conn) {
-    
-	die("Connection failed: " . mysqli_connect_error());
+
+    die("Connection failed: " . mysqli_connect_error());
 
 }
 
 echo "Connected successfully";
+
+//Close the connection
+
+mysqli_close($conn);
 
 ?>
