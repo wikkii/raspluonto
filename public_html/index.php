@@ -129,7 +129,7 @@ function checkValue(){
 	
 	var PirValue = document.getElementById("pir");
 	
-	<!-- If PIR's value has been defined as 1, then use red color -->
+	<!-- If PIRs value has been defined as 1, then use red color -->
 	if (PirValue.value == "1" ) {
 		PirValue.style.backgroundColor = "red";
 
