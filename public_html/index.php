@@ -99,5 +99,54 @@
 	</div>
 </div>
 
+
+
+<!-- Set table values -->
+
+<script>
+function setValue(){
+	
+	
+	<!-- Set value for PIR -->	
+	var PirValue = document.getElementById("pir").innerHTML = "1";
+	
+	<!-- Set value for Flame -->	
+	var FlameValue = document.getElementById("flame").innerHTML = "0";
+
+}
+
+<!-- Run script -->
+setValue();
+
+</script>
+
+<!-- Change table colors based on their value -->
+
+<script>
+function checkValue(){
+	
+	//Not working atm..
+	
+	var PirValue = document.getElementById("pir");
+	
+	<!-- If PIR's value has been defined as 1, then use red color -->
+	if (PirValue.value == "1" ) {
+		PirValue.style.backgroundColor = "red";
+
+		
+	}
+	<!-- If PIR's value has been defined as something else than 1, then use green color -->
+	else {
+		PirValue.style.backgroundColor = "green";
+	
+	
+	}
+}
+
+<!-- Run script -->
+checkValue();
+
+</script>
+
 </body>
 </html>
