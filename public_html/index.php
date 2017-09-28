@@ -135,7 +135,7 @@ function checkValue(){
 
 		
 	}
-	<!-- If PIR's value has been defined as something else than 1, then use green color -->
+	<!-- If PIRs value has been defined as something else than 1, then use green color -->
 	else {
 		PirValue.style.backgroundColor = "green";
 	
