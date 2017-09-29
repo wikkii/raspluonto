@@ -118,14 +118,14 @@ function checkValue(){
 	
 		console.log("we are in checkValue" + pir);
 	
-	<!-- If PIR's value has been defined as 1, then use red color -->
+	<!-- If PIRs value has been defined as 1, then use red color -->
 	if (Pir == 1 ) {
 		document.getElementById("pir").style.backgroundColor = "red";
 		document.getElementById("pir").innerHTML = "Occupied";
 		
 		console.log("we are in if");
 	}
-	<!-- If PIR's value has been defined as something else than 1, then use green color -->
+	<!-- If PIRs value has been defined as something else than 1, then use green color -->
 	else {
 		document.getElementById("pir").style.backgroundColor = "green";
 		document.getElementById("pir").innerHTML = "Empty";
@@ -133,14 +133,14 @@ function checkValue(){
 		console.log("we are in else");
 	
 	}
-	<!-- If Flame's value has been defined as 1, then use red color -->
+	<!-- If Flames value has been defined as 1, then use red color -->
 	if (Flame == 1 ) {
 		document.getElementById("flame").style.backgroundColor = "red";
 		document.getElementById("flame").innerHTML = "Burning";
 		
 		console.log("we are in if");
 	}
-	<!-- If Flame's value has been defined as something else than 1, then use green color -->
+	<!-- If Flames value has been defined as something else than 1, then use green color -->
 	else {
 		document.getElementById("flame").style.backgroundColor = "green";
 		document.getElementById("flame").innerHTML = "Gone out";
