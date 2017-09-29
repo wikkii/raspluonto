@@ -100,50 +100,59 @@
 </div>
 
 
-
+<!-- JavaScript starts here! -->
 <!-- Set table values -->
 
 <script>
-function setValue(){
 	
+	var Pir = 1;
+	var Flame = 1;
 	
-	<!-- Set value for PIR -->	
-	var PirValue = document.getElementById("pir").innerHTML = "1";
-	
-	<!-- Set value for Flame -->	
-	var FlameValue = document.getElementById("flame").innerHTML = "0";
+		console.log(pir);
 
-}
-
-<!-- Run script -->
-setValue();
-
-</script>
 
 <!-- Change table colors based on their value -->
-
-<script>
+	
+	
 function checkValue(){
 	
-	//Not working atm..
+		console.log("we are in checkValue" + pir);
 	
-	var PirValue = document.getElementById("pir");
-	
-	<!-- If PIRs value has been defined as 1, then use red color -->
-	if (PirValue.value == "1" ) {
-		PirValue.style.backgroundColor = "red";
-
+	<!-- If PIR's value has been defined as 1, then use red color -->
+	if (Pir == 1 ) {
+		document.getElementById("pir").style.backgroundColor = "red";
+		document.getElementById("pir").innerHTML = "Occupied";
 		
+		console.log("we are in if");
 	}
-	<!-- If PIRs value has been defined as something else than 1, then use green color -->
+	<!-- If PIR's value has been defined as something else than 1, then use green color -->
 	else {
-		PirValue.style.backgroundColor = "green";
+		document.getElementById("pir").style.backgroundColor = "green";
+		document.getElementById("pir").innerHTML = "Empty";
 	
+		console.log("we are in else");
 	
 	}
+	<!-- If Flame's value has been defined as 1, then use red color -->
+	if (Flame == 1 ) {
+		document.getElementById("flame").style.backgroundColor = "red";
+		document.getElementById("flame").innerHTML = "Burning";
+		
+		console.log("we are in if");
+	}
+	<!-- If Flame's value has been defined as something else than 1, then use green color -->
+	else {
+		document.getElementById("flame").style.backgroundColor = "green";
+		document.getElementById("flame").innerHTML = "Gone out";
+	
+		console.log("we are in else");
+	
+	}
+
 }
 
-<!-- Run script -->
+<!-- Call the function -->
+
 checkValue();
 
 </script>
