@@ -12,7 +12,7 @@ learningPeriod = 30
 
 def main():
 
-	broker_address="139.59.140.158"
+	broker_address="10.0.0.5"
 	client = mqtt.Client("P1")	
 	client.connect(broker_address)
 
