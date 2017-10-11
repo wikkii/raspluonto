@@ -1,6 +1,6 @@
-#TARKISTA/KORJAA PINNIT ENNEN AJOA!
+#CHECK/FIX PINS BEFORE TESTING!
 #http://www.knight-of-pi.org/digital-sensors-and-the-raspberry-pi-with-the-smoke-detector-mq-x-as-example/
-#Vilkaise myös ylläolevasta linkistä ^
+#Source and usage ^
 
 import time, sys
 import RPi.GPIO as GPIO #Teron kirjastoa voi kokeilla, mutta siellä käytetään vissiin analogista singaalia.
