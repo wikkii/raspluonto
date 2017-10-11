@@ -8,7 +8,6 @@ import time
 import botbook_gpio as gpio
 import paho.mqtt.client as mqtt
 
-learningPeriod = 30
 
 def main():
 
@@ -19,9 +18,9 @@ def main():
 	flamePin = 8
 	gpio.mode(flamePin, "in")
 
-	#Learning period
-	print ("learning... " + str(learningPeriod) + " seconds")
-	time.sleep(learningPeriod)
+	#small wait to be sure
+	print ("starting flame sensor...")
+	time.sleep(0.5)
 	
 	while(True):
 		flame = gpio.read(flamePin)
