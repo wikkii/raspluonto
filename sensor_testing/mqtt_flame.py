@@ -15,7 +15,7 @@ def main():
 	broker_address="10.0.0.5"
 	client = mqtt.Client("P1")	
 	client.connect(broker_address)
-
+	topic = "nuotiovahti_flame"
 	flamePin = 8
 	gpio.mode(flamePin, "in")
 
@@ -25,11 +25,11 @@ def main():
 	
 	while(True):
 		flame = gpio.read(flamePin)
-		if(flame == gpio.HIGH):
-			client.publish("nuotiovahti","Flame detected" + time.ctime())
+		if(flame == gpio.LOW):
+			client.publish(topic,"Flame detected" + time.ctime())
 			print ("Flame detected " + time.ctime())
 		else:
-			client.publish("nuotiovahti","NO flame detected" + time.ctime())
+			client.publish(topic,"NO flame detected" + time.ctime())
 			print ("NO flame detected " + time.ctime())
 		time.sleep(2)
 
