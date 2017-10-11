@@ -8,8 +8,6 @@ What we are trying to achieve is a Raspberry Pi based IoT device with two to thr
 
 ![alt text](https://github.com/wikkii/raspluonto/blob/master/Pictures/NuotiovahtiNewSmall.png "Prototype in action")
 
-<div style="text-align:center"><img src ="https://github.com/wikkii/raspluonto/blob/master/Pictures/NuotiovahtiNewSmall.png" /></div>
-
 One of the key features is to respect peoples privacy, so our prototype will not collect any data that can be linked to any specific person. After all in these days everything is somewhat connected to the internet and there are a lot of talk about peoples privacy.
 
 ---
