@@ -1,6 +1,6 @@
 # crontab -e
 # This runs the connectssh.sh script every minute
 # ">/dev/null 2>&1" makes sure outputs are not automatically being sent to user's email 
-# Check if running or not with "sudo tail -F /var/log/syslog"
+# Check whether running or not with "sudo tail -F /var/log/syslog"
 
 */1 * * * * /home/mint/connectssh.sh >/dev/null 2>&1
