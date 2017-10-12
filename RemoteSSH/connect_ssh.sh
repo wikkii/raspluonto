@@ -2,9 +2,10 @@
 #Script for creating a reverse SSH tunnel from Raspberry Pi to the server
 
 createTunnel() {
-	/usr/bin/ssh -N -R 2222:localhost:22 markus@139.59.140.158
+	#-o BatchMode=yes means that ssh will fail if auth keys are not setup correctly. This way it does not keep waiting forever for credentials.
+	/usr/bin/ssh -N -o BatchMode=yes -R 2222:localhost:22 markus@139.59.140.158
 
-
+	#($?) Expands to the exit status of the most recently executed foreground pipeline. -eq for numeric comparisons like "==" is for strings.
 	if [[ $? -eq 0 ]]; then
 		echo Tunnel created successfully
 	else
