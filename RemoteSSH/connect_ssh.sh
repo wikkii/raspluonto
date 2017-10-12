@@ -8,7 +8,7 @@ createTunnel() {
 	if [[ $? -eq 0 ]]; then
 		echo Tunnel created successfully
 	else
-		echo An error occured while creating a tunnel. RC was $?
+		echo An error occured when creating a tunnel. RC was $?
 	fi
 }
 
