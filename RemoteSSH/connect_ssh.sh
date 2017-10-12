@@ -3,7 +3,9 @@
 
 createTunnel() {
 	#-o BatchMode=yes means that ssh will fail if auth keys are not setup correctly. This way it does not keep waiting forever for credentials.
-	/usr/bin/ssh -N -o BatchMode=yes -R 2222:localhost:22 markus@139.59.140.158
+	#-f to run on the background meaning that you can still run commands server side
+	#-N means that there's no need to send commands once connected
+	/usr/bin/ssh -f -N -o BatchMode=yes -R 2222:localhost:22 markus@139.59.140.158
 
 	#($?) Expands to the exit status of the most recently executed foreground pipeline. -eq for numeric comparisons like "==" is for strings.
 	if [[ $? -eq 0 ]]; then
