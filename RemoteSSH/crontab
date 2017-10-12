@@ -1,0 +1,3 @@
+# crontab -e
+#This runs the connect_ssh.sh script every minute and outputs to tunnel.log file.
+*/1 * * * * /home/pi/connect_ssh.sh >> tunnel.log 2>&1
