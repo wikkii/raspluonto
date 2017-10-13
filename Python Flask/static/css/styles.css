@@ -1,0 +1,85 @@
+/* 
+
+CSS for Virtuaaliluonto - Nuotiovahti
+	By Markus Pyhäranta - 27.9.2017
+
+*/
+
+
+
+/* Header Navbar's title */
+
+#HeaderNav {
+	
+	color: #ff8800;
+	font-weight: bold;
+	
+}
+
+/* Div for the status tables */
+
+#maincontent {
+	
+	background-color: #f9f9f9;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 15px;
+}
+
+/* Div for the fire picture */
+
+#picture {
+	
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+/* Makes the fire picture smaller on devices smaller than 768px in width. */
+
+@media (max-width: 768px) {
+
+#logo	{width: 120px}
+
+}
+
+/* Table column headings */
+
+thead {
+
+	background-color: #eff0f2;
+
+}
+
+/* Tables for sensor data. #pir for motion detection and #flame for flame detaction. */
+
+#pir {
+
+
+
+}
+
+#flame {
+
+
+
+}
+
+/* Spacing */
+
+.space { 
+
+	margin-top: 50px; 
+	
+}
+
+/* End credits */
+
+#tekijä {
+	
+	color: grey;
+	text-align: center;
+	
+}
