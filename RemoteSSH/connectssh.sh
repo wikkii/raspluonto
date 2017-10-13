@@ -3,7 +3,7 @@
 
 createTunnel() {
         #-o BatchMode=yes means that ssh will fail if auth keys are not setup correctly. This way it does not keep w$
-        /usr/bin/ssh -N -o BatchMode=yes -R 2222:localhost:22 markus@139.59.140.158
+        /usr/bin/ssh -f -N -o BatchMode=yes -R 2222:localhost:22 markus@139.59.140.158
 
         #($?) Expands to the exit status of the most recently executed foreground pipeline. -eq for numeric comparis$
         if [[ $? -eq 0 ]]; then
