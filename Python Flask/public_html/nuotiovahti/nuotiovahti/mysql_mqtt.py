@@ -6,9 +6,7 @@ from mysql.connector import errorcode
 
 def addtobase(message):
         try:
-                cnx = mysql.connector.connect(user='nuotiovahti', password='nuotiovahti666!',
-                                                host='127.0.0.1',
-                                                database='nuotiovahti')
+                cnx = mysql.connector.connect(option_files='/home/mint/connectors.cnf')
         except mysql.connector.Error as err:
                 if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
                         print("Something is wrong with your user name or password")
@@ -49,4 +47,7 @@ client.connect("127.0.0.1",1883,60)
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.loop_forever(
+client.loop_forever()
+
+
+
