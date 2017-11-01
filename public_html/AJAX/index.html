@@ -79,9 +79,9 @@
 		<tbody>
 			<tr>
 				
-				<th>X</th>
-				<th id="pir"></th>
-				<th id="flame"></th>
+				<td>X</td>
+				<td id="pir"></td>
+				<td id="flame"></td>
 
 			</tr>
 		</tbody>
@@ -130,21 +130,18 @@
 	
 function checkValue(){
 	
-
 	
 	<!-- If PIRs value has been defined as 1, then use red color -->
 	if (Pir == 1 ) {
 		document.getElementById("pir").style.backgroundColor = "red";
 		document.getElementById("pir").innerHTML = "Occupied";
 		
-
 	}
 	<!-- If PIRs value has been defined as something else than 1, then use green color -->
 	else {
 		document.getElementById("pir").style.backgroundColor = "green";
 		document.getElementById("pir").innerHTML = "Empty";
 	
-
 	
 	}
 	<!-- If Flames value has been defined as 1, then use red color -->
@@ -152,21 +149,18 @@ function checkValue(){
 		document.getElementById("flame").style.backgroundColor = "red";
 		document.getElementById("flame").innerHTML = "Burning";
 		
-
 	}
 	<!-- If Flames value has been defined as something else than 1, then use green color -->
 	else {
 		document.getElementById("flame").style.backgroundColor = "green";
 		document.getElementById("flame").innerHTML = "Gone out";
 	
-
 	
 	}
 }
 <!-- Call the function -->
 checkValue();
 </script>
-
 <script src="main.js"></script>
 </body>
 </html>
