@@ -1,67 +1,66 @@
-var pirContainer = document.getElementById("pirinfo");
-var flameContainer = document.getElementById("flameinfo");
 var testContainer = document.getElementById("tabletest");
 
 var pageRequest = new XMLHttpRequest();
-pageRequest.open('GET', 'sensordata.json');
+pageRequest.open('GET', 'PirSensor.json');
+//pageRequest.open('GET', 'FlameSensor.json');
 pageRequest.onload = function() {
-/*
-	var myPirData = JSON.parse(pageRequest.responseText);
-	renderPIR(myPirData);
 
-	var myFlameData = JSON.parse(pageRequest.responseText);
-	renderFlame(myFlameData);
-*/
 	var myTestData = JSON.parse(pageRequest.responseText);
 	renderTest(myTestData);
 };
 pageRequest.send();
 
-/*
-function renderPIR(data) {
-	var htmlString1 = "";
 
-	
-	for (i = 0; i < data.length; i++) {
-
-		htmlString1 += "<p>" + data[i].sensor + " status is " + data[i].status + ".</p>";
-
-	}
-
-
-	pirContainer.insertAdjacentHTML('beforeend', htmlString1)
-	
-}
-
-
-*/
-/*
-function renderFlame(data) {
-	var htmlString2 = "";
-
-	
-	for (x in data) {
-
-		htmlString2 = "<p>" + data[x].sensor + " status is " + data[x].status + ".</p>";
-
-	}
-
-
-	flameContainer.insertAdjacentHTML('beforeend', htmlString2)
-	
-}
-*/
 
 function renderTest(data) {
 	var htmlString3 = "";
 
 
-	for (i = 0; i < data.length; i++) {
+
+	if (data.length > 0) {
+
+		for (i = 0; i < data.length; i++) {
+			
+			
+			//j = 0
+
+			//if (data[i].pir_rows > 3) {
+
+				//j = 1
+			//}
 
 
-	htmlString3 += "<th>" + data[i].status + "</th>";
+			htmlString3 += "<tr><td>" + data[i].location + "</td><td>" + data[i].pir_rows + "</td><td>" + data[i].flame_rows + "</td></tr>";
 
-		if (data[i].status == 1) {
+			if (data[i].pir_rows < 10) {
+				document.getElementsByTagName("td")[1].innerHTML = "Varattu";
+				
+		}
+
+		}
+
+	console.log ("yo" + htmlString3)
+	testContainer.insertAdjacentHTML('beforeend', htmlString3)
+
+
+	}
+
+
+}
+
+
+
+
+	//htmlString3 += "<tr>" + data[i] + "</tr>";
+
+
+
+
+
+
+/*
+
+if (data[i].status == 1) {
 
 		document.getElementsByTagName("th")[1].style.backgroundColor = "Yellow";
 		document.getElementsByTagName("th")[1].innerHTML = "Varattu";
@@ -70,10 +69,9 @@ function renderTest(data) {
 
 
 		else {
-		document.getElementsByTagName("th")[1].style.backgroundColor = "Green";
+		document.getElementsByTagName("th")[1].style.backgroundColor = "orange";
 		document.getElementsByTagName("th")[1].innerHTML = "Tyhja";
 	
-
 	
 		}
 	}
@@ -83,30 +81,5 @@ function renderTest(data) {
 }
 
 
-
-
-
-
-
-
-
-
-
-var mySensors= [
-
-	{
-
-	"sensor": "PIR",
-	"status": "1"
-
-	},
-	{
-
-	"sensor": "Flame",
-	"status": "0"
-
-	}
-]
-
-mySensors[1].status
+*/
 
