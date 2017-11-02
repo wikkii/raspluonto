@@ -2,6 +2,45 @@
 CSS for Virtuaaliluonto - Nuotiovahti
 	By Markus Pyhäranta - 27.9.2017
 */
+/* 
+
+.AreaStatusNo {
+	
+	background-color: green;
+	
+}
+
+
+
+.AreaStatusYes {
+	
+	background-color: red;
+	
+}
+
+
+*/
+
+
+
+
+
+#detectedTD {
+	
+	background-color: red;
+	
+}
+
+
+
+#notDetectedTD {
+	
+	background-color: green;
+	
+}
+
+
+
 
 
 
