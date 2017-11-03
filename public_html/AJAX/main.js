@@ -14,7 +14,7 @@ var dataContainer = document.getElementById("datatable");
 
 // Request & receive JSON Data
 var pageRequest = new XMLHttpRequest();
-pageRequest.open('GET', 'sensor_data.json');
+pageRequest.open('GET', '/static/json/sensor_data.json');
 pageRequest.onload = function() {
 	
 	// Save JSON data to a variable
