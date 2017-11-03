@@ -1,87 +1,81 @@
-var testContainer = document.getElementById("tabletest");
+/*
+======================
+JavaScript for AJAX request.
+Gets and handles JSON data from the server.
 
+
+Virtuaaliluonto 3.11.2017
+======================
+*/
+
+
+// Points to a table class in HTML
+var dataContainer = document.getElementById("datatable");
+
+// Request & receive JSON Data
 var pageRequest = new XMLHttpRequest();
-pageRequest.open('GET', 'PirSensor.json');
+pageRequest.open('GET', 'sensor_data.json');
 pageRequest.onload = function() {
-
-	var myTestData = JSON.parse(pageRequest.responseText);
-	renderTest(myTestData);
+	
+	// Save JSON data to a variable
+	var mySensorData = JSON.parse(pageRequest.responseText);
+	// Call the renderTest function and pass it to mySensorData variable
+	renderData(mySensorData);
 };
+
+// Send the request
 pageRequest.send();
 
 
-
-function renderTest(data) {
-	var htmlString3 = "";
+// Add HTML to the page. Array of objects is accessed with "data".
+function renderData(data) {
+	
+	var htmlString = "";
 
 
 	if (data.length > 0) {
 
 		for (i = 0; i < data.length; i++) {
-			
-
-			htmlString3 += "<tr><td>" + data[i].location + "</td><td class='AreaStatusNo'>" + data[i].pir_rows + "</td><td>" + data[i].flame_rows + "</td></tr>";
-
-			if (data[i].pir_rows < 5) {
-				
-				console.log ("yo V1")
-
-				$( "th" ).text("Hello");
-				/*$('.AreaStatusNo').replaceWith('.hello');
-				$('.hello').text("Hello World!");*/
-				//$( ".AreaStatusNo" ).css("background-color", "blue");
-				
-				$( ".AreaStatusNo" ).css( "color", "red" )
- 				.add( "p" )
-  				.css( "background", "orange" );				
-
-// https://api.jquery.com/add/
-			}
-
-
-			else	{
-
-				console.log ("yo V2")
-			}
-
-
-			
-
-		}
-
-	console.log ("yo V3" + htmlString3)
-	testContainer.insertAdjacentHTML('beforeend', htmlString3)
-
-
-	}
-
-
-}
-
-
-
-
-	//htmlString3 += "<tr>" + data[i] + "</tr>";
-
-
-
-
-
-
-/*
-if (data[i].status == 1) {
-		document.getElementsByTagName("th")[1].style.backgroundColor = "Yellow";
-		document.getElementsByTagName("th")[1].innerHTML = "Varattu";
 		
+		// Variables for HTML classes
+		var pirhtml = "<td class='AreaStatusNo'>"
+		var flamehtml = "<td class='FlameStatusNo'>"
+
+			// If the amount of rows from the PIR sensor is higher than 5, then use the HMTL class "AreaStatusYes"
+			if (data[i].pir_rows > 5) {
+				
+				pirhtml = "<td class='AreaStatusYes'>"
+
+			}
+			
+			// If the amount of rows from the flame sensor is higher than 5, then use the HMTL class "AreaStatusYes"
+			if (data[i].flame_rows > 2) {
+				
+				flamehtml = "<td class='FlameStatusYes'>"
+
+			}
+
+			// Add elements to htmlString
+			htmlString += "<tr><td>" + data[i].location + "</td>"+ pirhtml + data[i].pir_rows + "</td>" + flamehtml + data[i].flame_rows + "</td></tr>";
+
+
+
 		}
-		else {
-		document.getElementsByTagName("th")[1].style.backgroundColor = "orange";
-		document.getElementsByTagName("th")[1].innerHTML = "Tyhja";
-	
-	
-		}
+
+	// Add htmlString as content to HTML
+	dataContainer.insertAdjacentHTML('beforeend', htmlString)
+				
+				// Text values for the classes
+				$( ".AreaStatusNo" ).text("Available");
+
+				$( ".AreaStatusYes" ).text("Occupied");
+
+ 			
+				$( ".FlameStatusNo" ).text("No fire");
+
+				$( ".FlameStatusYes" ).text("Fire!");
+
 	}
-	testContainer.insertAdjacentHTML('beforeend', htmlString3)
-	
+
+
 }
-*/
