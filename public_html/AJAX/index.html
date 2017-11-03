@@ -1,6 +1,18 @@
 <!doctype html>
 <html>
+
+<!--
+==============================
+HTML for Nuotiovahti.
+Check the current status of campsites in Nuuksio national park.
+
+Virtuaaliluonto 3.11.2017
+==============================
+-->
+
+
 <head>
+
 	<title>Virtuaaliluonto - Nuotiovahti</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="Check the realtime status of nearby campfires." >
@@ -55,7 +67,7 @@
 <br>
 	<div class="row">
 		<div class="col-xs-12">
-		<img src="../static/pics/fireBig.png" id="logo" alt="Fire logo">
+		<img src="fireBig.png" id="logo" alt="Fire logo">
 		</div>
 	</div>
 </div>
@@ -66,7 +78,7 @@
 	<div class="row">
 	
 	
-	<table class="table table-bordered" id="tabletest">
+	<table class="table table-bordered" id="datatable">
 		<thead>
 	 		<tr>
 				
@@ -76,34 +88,14 @@
 
 			</tr>
 		</thead>
+		
 		<tbody>
 			<tr>
 				
-		<!--		<td>X</td>
-				<td id="pir"></td>
-				<td id="flame"></td>
 
-			</tr> -->
+			</tr>
 		</tbody>
 	</table>
-
-
-<!--
-	<button id="btn">Fetch data</button>
-	<br><br>
-	<div id="pirinfo"></div>
-
-	<br><br>
-
-	<div id="flameinfo"></div>
-
-	<br><br>
-
-	<div id="testinfo"></div>
-
-
-	</div>
--->
 
 	<div class="space"></div>
 	
@@ -111,59 +103,15 @@
 	
 	<div class="row">
 		
-		<p id="tekijä">Virtuaaliluonto 2017.</p>
+		<p id="credits">Virtuaaliluonto 2017.</p>
 	
 	</div>
 </div>
 
 
-<!-- JavaScript starts here! -->
-<!-- Set table values -->
-
-<script>
-/*	
-	var Pir = 1;
-	var Flame = 1;
-	
-		console.log(pir);
-<!-- Change table colors based on their value -->
-	
-	
-function checkValue(){
-	
-	
-	<!-- If PIRs value has been defined as 1, then use red color -->
-	if (Pir == 1 ) {
-		document.getElementById("pir").style.backgroundColor = "red";
-		document.getElementById("pir").innerHTML = "Occupied";
-		
-	}
-	<!-- If PIRs value has been defined as something else than 1, then use green color -->
-	else {
-		document.getElementById("pir").style.backgroundColor = "green";
-		document.getElementById("pir").innerHTML = "Empty";
-	
-	
-	}
-	<!-- If Flames value has been defined as 1, then use red color -->
-	if (Flame == 1 ) {
-		document.getElementById("flame").style.backgroundColor = "red";
-		document.getElementById("flame").innerHTML = "Burning";
-		
-	}
-	<!-- If Flames value has been defined as something else than 1, then use green color -->
-	else {
-		document.getElementById("flame").style.backgroundColor = "green";
-		document.getElementById("flame").innerHTML = "Gone out";
-	
-	
-	}
-}
-<!-- Call the function -->
-checkValue();
-*/
-</script>
+<!-- JavaScript for dynamic data -->
 
 <script src="main.js"></script>
+
 </body>
 </html>
