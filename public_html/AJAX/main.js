@@ -24,6 +24,19 @@ pageRequest.onload = function() {
 };
 
 // Send the request
+
+/*
+function proxy()
+{
+  pageRequest.send();
+}
+
+setInterval( proxy, 10000 ); // last arg is in milliseconds
+
+
+*/
+
+
 pageRequest.send();
 
 
