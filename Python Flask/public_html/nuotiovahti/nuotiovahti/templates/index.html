@@ -1,6 +1,18 @@
 <!doctype html>
 <html>
+
+<!--
+================================================================
+HTML for Nuotiovahti.
+Check the current status of campsites in Nuuksio national park.
+
+Virtuaaliluonto 3.11.2017
+================================================================
+-->
+
+
 <head>
+
 	<title>Virtuaaliluonto - Nuotiovahti</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="Check the realtime status of nearby campfires." >
@@ -9,7 +21,7 @@
 	
 	 <!-- Libraries used -->
 	
-	<link rel="stylesheet" href="../static/css/styles.css"> 
+	<link rel="stylesheet" href="styles.css"> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -55,7 +67,7 @@
 <br>
 	<div class="row">
 		<div class="col-xs-12">
-		<img src="../static/pics/fireBig.png" id="logo" alt="Fire logo">
+		<img src="/static/pics/fireBig.png" id="logo" alt="Fire logo">
 		</div>
 	</div>
 </div>
@@ -66,9 +78,9 @@
 	<div class="row">
 	
 	
-	<table class="table table-bordered">
+	<table class="table table-bordered" id="datatable">
 		<thead>
-			<tr>
+	 		<tr>
 				
 				<th>Location:</th>
 				<th>Area status:</th>
@@ -76,17 +88,14 @@
 
 			</tr>
 		</thead>
+		
 		<tbody>
 			<tr>
 				
-				<th>X</th>
-				<th id="pir"></th>
-				<th id="flame"></th>
 
 			</tr>
 		</tbody>
 	</table>
-	</div>
 
 	<div class="space"></div>
 	
@@ -94,61 +103,15 @@
 	
 	<div class="row">
 		
-		<p id="tekijä">Virtuaaliluonto 2017.</p>
+		<p id="credits">Virtuaaliluonto 2017.</p>
 	
 	</div>
 </div>
 
 
-<!-- JavaScript starts here! -->
-<!-- Set table values -->
+<!-- JavaScript for dynamic data -->
 
-<script>
-	
-	var Pir = 1;
-	var Flame = 1;
-	
-		console.log(pir);
-<!-- Change table colors based on their value -->
-	
-	
-function checkValue(){
-	
-		console.log("we are in checkValue" + pir);
-	
-	<!-- If PIRs value has been defined as 1, then use red color -->
-	if (Pir == 1 ) {
-		document.getElementById("pir").style.backgroundColor = "red";
-		document.getElementById("pir").innerHTML = "Occupied";
-		
-		console.log("we are in if");
-	}
-	<!-- If PIRs value has been defined as something else than 1, then use green color -->
-	else {
-		document.getElementById("pir").style.backgroundColor = "green";
-		document.getElementById("pir").innerHTML = "Empty";
-	
-		console.log("we are in else");
-	
-	}
-	<!-- If Flames value has been defined as 1, then use red color -->
-	if (Flame == 1 ) {
-		document.getElementById("flame").style.backgroundColor = "red";
-		document.getElementById("flame").innerHTML = "Burning";
-		
-		console.log("we are in if");
-	}
-	<!-- If Flames value has been defined as something else than 1, then use green color -->
-	else {
-		document.getElementById("flame").style.backgroundColor = "green";
-		document.getElementById("flame").innerHTML = "Gone out";
-	
-		console.log("we are in else");
-	
-	}
-}
-<!-- Call the function -->
-checkValue();
-</script>
+<script src="main.js"></script>
+
 </body>
 </html>
