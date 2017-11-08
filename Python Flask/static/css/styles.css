@@ -1,9 +1,37 @@
-/* 
+/*
+============================================
+CSS styles for Virtuaaliluonto - Nuotiovahti
 
-CSS for Virtuaaliluonto - Nuotiovahti
-	By Markus Pyhäranta - 27.9.2017
-
+Virtuaaliluonto 3.11.2017
+============================================
 */
+
+
+/* Colors for PIR sensor data based on row count */
+
+.AreaStatusNo {
+	
+	background-color: #64d326;
+	
+}
+.AreaStatusYes {
+	
+	background-color: #ff2600;
+	
+}
+
+/* Colors for flame sensor data based on row count */
+
+.FlameStatusNo {
+	
+	background-color: #64d326;
+	
+}
+.FlameStatusYes {
+	
+	background-color: #ff2600;
+	
+}
 
 
 
@@ -53,33 +81,22 @@ thead {
 
 }
 
-/* Tables for sensor data. #pir for motion detection and #flame for flame detaction. */
 
-#pir {
-
-
-
-}
-
-#flame {
-
-
-
-}
 
 /* Spacing */
 
 .space { 
 
-	margin-top: 50px; 
+	margin-top: 70px; 
 	
 }
 
 /* End credits */
 
-#tekijä {
+#credits {
 	
 	color: grey;
 	text-align: center;
+
 	
 }
