@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<!--
+================================================================
+HTML for Nuotiovahti.
+Check the current status of campsites in Nuuksio national park.
+
+Virtuaaliluonto 3.11.2017
+================================================================
+-->
+
+
+<head>
+
+	<title>Virtuaaliluonto - Nuotiovahti</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Check the realtime status of nearby campfires." >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../static/pics/favicon.png">
+	
+	 <!-- Libraries used -->
+	
+	<link rel="stylesheet" href="/static/css/styles.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!-- Header -->
+
+<div class="container">
+	
+	<!-- Fixed Navbar -->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="HeaderNav" href="#">Nuotiovahti</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="https://raspluonto.wordpress.com">About</a></li>
+            <li><a href="https://raspluonto.wordpress.com/contact/">Contact</a></li>           
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<br>
+
+<!-- Fire Picture -->
+ 
+<div class="container" id="picture">	
+
+<br>
+	<div class="row">
+		<div class="col-xs-12">
+		<img src="/static/pics/fireBig.png" id="logo" alt="Fire logo">
+		</div>
+	</div>
+</div>
+
+<!-- Tables for status data -->
+
+<div class="container" id="maincontent">		
+	<div class="row">
+	
+	
+	<table class="table table-bordered" id="datatable">
+		<thead>
+	 		<tr>
+				
+				<th>Location:</th>
+				<th>Area status:</th>
+				<th>Fire status:</th>
+
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				
+
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="space"></div>
+	
+<!-- Footer & credits -->
+	
+	<div class="row">
+		
+		<p id="credits">Virtuaaliluonto 2017.</p>
+	
+	</div>
+</div>
+
+
+<!-- JavaScript for dynamic data -->
+
+<script src="/static/js/main.js"></script>
+
+</body>
+</html>
