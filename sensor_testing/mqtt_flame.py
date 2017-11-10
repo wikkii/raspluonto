@@ -11,28 +11,26 @@ import paho.mqtt.client as mqtt
 
 def main():
 
-	broker_address="10.0.0.5"
-	client = mqtt.Client("P1")	
-	client.connect(broker_address)
-	topic = "nuotiovahti_flame"
-	flamePin = 8
-	gpio.mode(flamePin, "in")
+        broker_address="139.59.140.158"
+        client = mqtt.Client("P2")      
+        client.connect(broker_address)
+        topic = "nuotiovahti"
+        flamePin = 8
+        gpio.mode(flamePin, "in")
 
-	#small wait to be sure
-	print ("starting flame sensor...")
-	time.sleep(0.5)
-	
-	while(True):
-		flame = gpio.read(flamePin)
-		if(flame == gpio.LOW):
-			client.publish(topic,"Flame detected" + time.ctime())
-			print ("Flame detected " + time.ctime())
-		else:
-			client.publish(topic,"NO flame detected" + time.ctime())
-			print ("NO flame detected " + time.ctime())
-		time.sleep(2)
+        #Learning period
+        #print ("starting flame sensor...")
+
+
+        while(True):
+                flame = gpio.read(flamePin)
+                if(flame == gpio.LOW):
+                        client.publish(topic,"Flame detected" + time.ctime())
+                        #print ("Flame detected " + time.ctime())
+                else:
+                        client.publish(topic,"NO flame detected" + time.ctime())
+                        #print ("NO flame detected " + time.ctime())
+                time.sleep(3)
 
 if __name__ == "__main__":
-	main()
-
-
+        main()
