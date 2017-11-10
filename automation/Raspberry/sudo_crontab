@@ -1,0 +1,7 @@
+# These are used with sudo priviliges!
+
+#@reboot /home/pi/startsakis.sh >/dev/null 2>&1
+#@reboot /home/pi/startsensors.sh >/dev/null 2>&1
+
+
+#@reboot cd /home/pi/test_code/ && python mqtt_pir_test.py &
