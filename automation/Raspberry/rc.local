@@ -21,10 +21,10 @@ fi
 #Start sensors on startup
 
 
-(sleep 10
-python /home/pi/test_code/mqtt_pir_test.py) &
+#(sleep 10
+#python /home/pi/test_code/mqtt_pir_test.py) &
 
-(sleep 70
-python /home/pi/test_code/flame_test.py) &
+#(sleep 70
+#python /home/pi/test_code/flame_test.py) &
 
 exit 0
