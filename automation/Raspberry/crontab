@@ -3,6 +3,6 @@
 # ">/dev/null 2>&1" makes sure outputs are not automatically being sent to user's email 
 # Check whether running or not with "sudo tail -F /var/log/syslog"
 
-*/1 * * * * /home/pi/connectssh.sh >/dev/null 2>&1
-@reboot /home/pi/startsakis.sh >/dev/null 2>&1
-@reboot /home/pi/startsensors.sh >/dev/null 2>&1
+#*/1 * * * * /home/pi/remoteconnection.sh >/dev/null 2>&1
+#@reboot /home/pi/startsakis.sh >/dev/null 2>&1
+#*/1 * * * * /home/pi/startsensors.sh >/dev/null 2>&1
