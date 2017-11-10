@@ -1,0 +1,1 @@
+dwc_otg.lpm_enable=0 root=PARTUUID=f3c42936-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait
