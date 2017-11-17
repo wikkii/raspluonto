@@ -1,10 +1,9 @@
+
 import paho.mqtt.client as mqtt
 import mysql.connector
 from mysql.connector import errorcode
 
-#cursor = cnx.cursor()
-
-def addtobase(message):
+def addtobase(topic):
         try:
                 cnx = mysql.connector.connect(option_files='connector.cnf')
         except mysql.connector.Error as err:
@@ -17,27 +16,32 @@ def addtobase(message):
         else:
                 print("connected to database")
 
-
         cursor = cnx.cursor()
-        print(message + "adding")
-        add_sensordata = ("INSERT INTO sensordata VALUES(%(data)s)")
+        print(topic + "adding")
+        add_sensordata = ''
+        if topic == "Pir":
+                add_sensordata = ("INSERT INTO Pir(pir_id) VALUES(1)")
+        elif topic == "Flame":
+                add_sensordata = ("INSERT INTO Flame(flame_id) VALUES(1)")
 
-        data_sensordata = {
-                'data': message
-        }
-
-        cursor.execute(add_sensordata, data_sensordata)
+        cursor.execute(add_sensordata)
         cnx.commit()
         cursor.close()
         cnx.close()
 
 def on_connect(client, userdata, flags, rc):
         print("Connected with result code "+str(rc))
-        client.subscribe("nuotiovahti")
+        client.subscribe("nuotiovahti/#")
 def on_message(client, userdata, msg):
         #if msg.payload.decode() == "Hello world!":
-        addtobase(msg.payload)
-        print(msg.payload + " hello")
+        print("payload is " + msg.payload)
+
+        if msg.payload == "1":
+                addtobase("Pir")
+        elif msg.payload == "2":
+                addtobase("Flame")
+        else:
+                print("error lol")
         #client.disconnect()
 
 
@@ -48,6 +52,3 @@ client.on_connect = on_connect
 client.on_message = on_message
 
 client.loop_forever()
-
-
-
