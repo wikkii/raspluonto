@@ -14,7 +14,7 @@ function getData () {
 
 	// Request & receive JSON Data
 	var pageRequest = new XMLHttpRequest();
-	pageRequest.open('GET', '/temp/sensor_data.json');
+	pageRequest.open('GET', 'sensor_data.json');
 	pageRequest.onload = function() {
 	
 	
@@ -91,3 +91,4 @@ function renderData(data) {
 	}
 
 } // Function ends here
+
