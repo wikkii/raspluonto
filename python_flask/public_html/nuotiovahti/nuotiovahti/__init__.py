@@ -22,16 +22,10 @@ def getData():
                         print("Database does not exist")
                 else:
                         print(err)
-      
-          
-
 
         cursor = cnx.cursor()
-       
-
-
-        cursor.execute("select (select count(f.detection_time) from Flame as f where detection_time >now()- INTERVAL$
-
+  
+        cursor.execute("select (select count(f.detection_time) from Flame as f where detection_time >now()- INTERVAL 300 SECOND) as flame, (select count(p.detection_time) from Pir as p where detection_time >now()- INTERVAL 300 SECOND) as pir;")
         datarows = jsonify(cursor.fetchall())
 
         cursor.close()
