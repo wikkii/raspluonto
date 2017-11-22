@@ -14,7 +14,7 @@ function getData () {
 
 	// Request & receive JSON Data
 	var pageRequest = new XMLHttpRequest();
-	pageRequest.open('GET', 'sensor_data.json');
+	pageRequest.open('GET', 'nuotiovahti.info/data');
 	pageRequest.onload = function() {
 	
 	
@@ -68,7 +68,7 @@ function renderData(data) {
 			}
 
 			// Add elements to htmlString
-			htmlString += "<tr><td>" + data[i].location + "</td>"+ pirhtml + data[i].pir_rows + "</td>" + flamehtml + data[i].flame_rows + "</td></tr>";
+			htmlString += "<tr><td>Mustalampi</td>"+ pirhtml + data[i].1 + "</td>" + flamehtml + data[i].0 + "</td></tr>";
 
 
 		}
@@ -85,7 +85,7 @@ function renderData(data) {
  			
 				$( ".FlameStatusNo" ).text("No fire");
 
-				$( ".FlameStatusYes" ).text("Fire!");
+				$( ".FlameStatusYes" ).text("Burning");
 
 
 	}
