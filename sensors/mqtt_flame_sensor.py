@@ -14,21 +14,21 @@ def main():
         broker_address="139.59.140.158"
         client = mqtt.Client("P2")      
         client.connect(broker_address)
-        topic = "nuotiovahti"
+        topic = "nuotiovahti/flame"
         flamePin = 8
         gpio.mode(flamePin, "in")
 
 
         while(True):
                 flame = gpio.read(flamePin)
-                
-		if(flame == gpio.LOW):
-                        client.publish(topic,"Flame detected")
 
-                else:
-                        client.publish(topic,"NO flame detected")
+                if(flame == gpio.LOW):
+                        client.publish(topic,"2")
 
-                time.sleep(3)
+#                else:
+#                        client.publish(topic,"NO flame detected")
+
+                time.sleep(2)
 
 if __name__ == "__main__":
-	main()
+        main()
