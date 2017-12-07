@@ -10,11 +10,11 @@ session=$CheckSession
 #session = $CheckSession
 
 if [ "$session" ]; then
-#:
-echo 'Someone is logged in! Aborting...'
+:
+#echo 'Someone is logged in! Aborting...'
 
 else
-#ps aux | grep 'sshd: markus' | awk '{print $2}' | grep -v $PID | sudo xargs kill -9
-echo 'Just killed all processes!'
+ps aux | grep 'sshd: markus' | awk '{print $2}' | grep -v $PID | sudo xargs kill -9
+#echo 'Just killed all processes!'
 
 fi
