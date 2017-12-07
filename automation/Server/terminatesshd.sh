@@ -9,7 +9,6 @@ session=$CheckSession
 #CheckSession = $(ps aux | grep '[m]arkus@pts/0')
 #session = $CheckSession
 
-
 if [ "$session" ]; then
 #:
 echo 'Someone is logged in! Aborting...'
