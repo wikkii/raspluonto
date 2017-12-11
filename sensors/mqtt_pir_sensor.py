@@ -13,24 +13,25 @@ learningPeriod = 30
 
 def main():
 
-        broker_address="139.59.140.158" 
+        broker_address="139.59.140.158"
         client = mqtt.Client("P1") #create new instance
         client.connect(broker_address) #connect to broker
 
         pirPin = 7
         gpio.mode(pirPin,"in")
         #Learning period
-	client.publish("nuotiovahti","learning... " + str(learningPeriod) + " seconds")
-        
-	time.sleep(learningPeriod) # <1>
+#       client.publish("nuotiovahti","learning... " + str(learningPeriod) + " seconds")
+
+        time.sleep(learningPeriod) # <1>
         while (True):
                 movement = gpio.read(pirPin) # <2>
                 if(movement == gpio.HIGH):
-                        client.publish("nuotiovahti","1")
+                        client.publish("nuotiovahti/pir","1")
+                else:
+                        client.publish("nuotiovahti/pir", "no movement detected")
 
-
-                time.sleep(1)
+                time.sleep(2)
 
 
 if __name__ == "__main__":
-	main()
+        main()
