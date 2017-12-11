@@ -1,7 +1,4 @@
 # These are used with sudo priviliges!
+# Use this for connecting SIM800 to 2G network. Add the following line to "sudo crontab -e".
 
-#@reboot /home/pi/startsakis.sh >/dev/null 2>&1
-#@reboot /home/pi/startsensors.sh >/dev/null 2>&1
-
-
-#@reboot cd /home/pi/test_code/ && python mqtt_pir_test.py &
+@reboot /home/pi/startsakis.sh >/dev/null 2>&1
