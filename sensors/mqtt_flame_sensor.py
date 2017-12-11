@@ -12,7 +12,7 @@ import paho.mqtt.client as mqtt
 def main():
 
         broker_address="139.59.140.158"
-        client = mqtt.Client("P2")      
+        client = mqtt.Client("P2")
         client.connect(broker_address)
         topic = "nuotiovahti/flame"
         flamePin = 8
@@ -25,8 +25,8 @@ def main():
                 if(flame == gpio.LOW):
                         client.publish(topic,"2")
 
-#                else:
-#                        client.publish(topic,"NO flame detected")
+                else:
+                        client.publish(topic,"NO flame detected")
 
                 time.sleep(2)
 
