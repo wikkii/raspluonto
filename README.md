@@ -12,4 +12,5 @@ One of the key features is to respect peoples privacy, so our prototype will not
 
 The project's Wordpress page contains more info about our progression and overall learning experiences: https://raspluonto.wordpress.com/
 
+The project was funded by:
 ![alt text](https://github.com/wikkii/raspluonto/blob/master/pictures/maaseuturahastoEU.jpg "Maaseuturahasto")
