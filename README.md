@@ -1,6 +1,6 @@
 # Virtuaaliluonto - Nuotiovahti
 
-### Git repository for Virtuaaliluonto related project about non-intrusive surveilance using Raspberry pi.
+### Git repository for Virtuaaliluonto related project about non-intrusive surveillance using Raspberry pi.
 
 What we are trying to achieve is a Raspberry Pi based IoT device with two to three sensors: movement, flame and perhaps smoke. The basic idea is to put the whole thing next to a campfire and collect useful data about the current status of that particular spot. Collected data is then sent over the web to our server which is hosting a site that hikers and campers can use to see whether the campfire spot is already occupied by others or if it has a fire going on.
 
